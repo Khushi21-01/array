@@ -7,25 +7,7 @@
 
     <head>
         <title>Sum of Multiples</title>
-        <script>
-            function f4(a, b, l) {
-                let sum = 0;
-                for (let i = 0; i < l.length; i++) {
-                    if (l[i] % a === 0 || l[i] % b === 0) {
-                        sum += l[i];
-                    }
-                }
-                return sum;
-            }
-            function calculateSum() {
-                let a = parseInt(document.getElementById('inputA').value);
-                let b = parseInt(document.getElementById('inputB').value);
-                let l = document.getElementById('inputL').value.split(',').map(Number);
-    
-                let result = f4(a, b, l);
-                alert('The sum of all multiples of ' + a + ' or ' + b + ' in the array is: ' + result);
-            }
-        </script>
+        <script src="Exercise1.js"></script>
     </head>
     <body>
         <h1>Sum of Multiples Calculator</h1>

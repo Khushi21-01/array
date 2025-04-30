@@ -1,0 +1,29 @@
+
+/*<p>Exercise 4, Arrays: f4 should take 2 integer and 1 array parameters and return an integer.</p>
+<p>Create a function f4 to return the sum of all the multiples of a or b in array l</p>
+<p>(Exercise 4.1) Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
+<p>Call the function f4 in the function called by onClick, and alert the user to the 
+    returned answer when they press the button.</p>*/
+
+    
+        
+            function f4(a, b, l) {
+                let sum = 0;
+                for (let i = 0; i < l.length; i++) {
+                    if (l[i] % a === 0 || l[i] % b === 0) {
+                        sum += l[i];
+                    }
+                }
+                return sum;
+            }
+            function calculateSum() {
+                let a = parseInt(document.getElementById('inputA').value);
+                let b = parseInt(document.getElementById('inputB').value);
+                let l = document.getElementById('inputL').value.split(',').map(Number);
+    
+                let result = f4(a, b, l);
+                alert('The sum of all multiples of ' + a + ' or ' + b + ' in the array is: ' + result);
+            }
+        
+    
+    
