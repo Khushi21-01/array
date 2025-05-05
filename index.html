@@ -34,30 +34,7 @@
 
     <head>
         <title>Sum of Multiples of Factors</title>
-        <script>
-            function f5(a, l) {
-                let sum = 0;
-                for (let i = 0; i < l.length; i++) {
-                    if (l[i] % a[0] == 0 || l[i] % a[1] == 0) {
-                        sum += l[i];
-                    }
-                }
-                return sum;
-            }
-    
-            function calculateSum() {
-                let a = document.getElementById('inputA').value.split(',').map(Number); 
-                let l = document.getElementById('inputL').value.split(',').map(Number); 
-    
-                if (a.length !== 2) {
-                    alert('Please enter exactly two integers for array a.');
-                    return;
-                }
-    
-                let result = f5(a, l);
-                alert('The sum of all multiples of factors in array a found in array l is: ' + result);
-            }
-        </script>
+        <script src="Exercise2.js"></script>
     </head>
     <body>
         <h1>Sum of Multiples of Factors Calculator</h1>
@@ -81,32 +58,12 @@
     </p>
     <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
     
-    //<input type="text" id="nums"> <button onclick="mapNums()">Press me!</button>
+    
     
 
 <head>
     <title>Sum of Multiples of Factors</title>
-    <script>
-        function f6(a, l) {
-            let sum = 0;
-            for (let i = 0; i < l.length; i++) {
-                for (let j = 0; j < a.length; j++) {
-                    if (l[i] % a[j] === 0) {
-                        sum += l[i];
-                        break;
-                    }
-                }
-            }
-            return sum;
-        }
-        function calculateSum() {
-            const a = document.getElementById('inputA').value.split(',').map(Number); 
-            const l = document.getElementById('inputL').value.split(',').map(Number);
-
-            const result = f6(a, l);
-            alert('The sum of all multiples of factors in array a found in array l is: ' + result);
-        }
-    </script>
+    <script src="Exercise3.js"></script>
 </head>
 <body>
     <h1>Sum of Multiples of Factors Calculator</h1>
