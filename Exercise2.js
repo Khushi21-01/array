@@ -15,8 +15,8 @@ function f5(a, l) {
 }
 
 function calculate5() {
-    let a = parseInt(document.getElementById('inputA').value.split(',').map(Number)); 
-    let l = parseInt(document.getElementById('inputL').value.split(',').map(Number)); 
+    let a = document.getElementById('inputA').value.split(',').map(Number); 
+    let l = document.getElementById('inputL').value.split(',').map(Number); 
 
     if (a.length !== 2) {
         alert('Please enter exactly two integers for array a.');
