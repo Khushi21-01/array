@@ -19,9 +19,9 @@ function f6(a, l) {
     return sum;
 }
 function calculateSum() {
-    const a = document.getElementById('inputA').value.split(',').map(Number); 
-    const l = document.getElementById('inputL').value.split(',').map(Number);
+    let a = document.getElementById('inputA').value.split(',').map(Number); 
+    let l = document.getElementById('inputL').value.split(',').map(Number);
 
-    const result = f6(a, l);
+    let result = f6(a, l);
     alert('The sum of all multiples of factors in array a found in array l is: ' + result);
 }
