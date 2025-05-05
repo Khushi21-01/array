@@ -16,7 +16,7 @@
                 }
                 return sum;
             }
-            function calculateSum() {
+            function calculate4() {
                 let a = parseInt(document.getElementById('inputA').value);
                 let b = parseInt(document.getElementById('inputB').value);
                 let l = document.getElementById('inputL').value.split(',').map(Number);

@@ -14,7 +14,7 @@ function f5(a, l) {
     return sum;
 }
 
-function calculateSum() {
+function calculate5() {
     let a = document.getElementById('inputA').value.split(',').map(Number); 
     let l = document.getElementById('inputL').value.split(',').map(Number); 
 

@@ -18,7 +18,7 @@ function f6(a, l) {
     }
     return sum;
 }
-function calculateSum() {
+function calculate6() {
     let a = document.getElementById('inputA').value.split(',').map(Number); 
     let l = document.getElementById('inputL').value.split(',').map(Number);
 
