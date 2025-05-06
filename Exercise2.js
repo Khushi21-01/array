@@ -4,10 +4,10 @@
 <p>(Exercise 5.1) Create a page with a button and two wide input boxes, labelled a and l</p>
 <p>Call the function f5 in the function called by onClick, and alert the user to the 
     returned answer when they press the button.</p>*/
-function f5(a, l) {
+function f5(c, n) {
     let sum = 0;
-    for (let i = 0; i < l.length; i++) {
-        if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+    for (let i = 0; i < n.length; i++) {
+        if (n[i] % c[0] === 0 || n[i] % c[1] === 0) {
             sum += l[i];
         }
     }
@@ -15,14 +15,14 @@ function f5(a, l) {
 }
 
 function calculate5() {
-    let a = document.getElementById('inputA').value.split(',').map(Number); 
-    let l = document.getElementById('inputL').value.split(',').map(Number); 
+    let c = document.getElementById('inputC').value.split(',').map(Number); 
+    let n = document.getElementById('inputN').value.split(',').map(Number); 
 
-    if (a.length !== 2) {
-        alert('Please enter exactly two integers for array a.');
+    if (c.length !== 2) {
+        alert('Please enter exactly two integers for array c.');
         return;
     }
 
-    let result = f5(a, l);
-    alert('The sum of all multiples of factors in array a found in array l is: ' + result);
+    let result = f5(c, n);
+    alert('The sum of all multiples of factors in array c found in array n is: ' + result);
 }
