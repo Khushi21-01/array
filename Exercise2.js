@@ -8,7 +8,7 @@ function f5(c, n) {
     let sum = 0;
     for (let i = 0; i < n.length; i++) {
         if (n[i] % c[0] === 0 || n[i] % c[1] === 0) {
-            sum += l[i];
+            sum += n[i];
         }
     }
     return sum;
