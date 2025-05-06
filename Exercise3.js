@@ -6,12 +6,12 @@
     returned answer when they press the button.</p>
 </p>
 <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>*/
-function f6(a, l) {
+function f6(d, m) {
     let sum = 0;
-    for (let i = 0; i < l.length; i++) {
-        for (let j = 0; j < a.length; j++) {
-            if (l[i] % a[j] === 0) {
-                sum += l[i];
+    for (let i = 0; i < d.length; i++) {
+        for (let j = 0; j < d.length; j++) {
+            if (m[i] % d[j] === 0) {
+                sum += m[i];
                 break;
             }
         }
@@ -19,9 +19,9 @@ function f6(a, l) {
     return sum;
 }
 function calculate6() {
-    let a = document.getElementById('inputA').value.split(',').map(Number); 
-    let l = document.getElementById('inputL').value.split(',').map(Number);
+    let d = document.getElementById('inputD').value.split(',').map(Number); 
+    let m = document.getElementById('inputM').value.split(',').map(Number);
 
-    let result = f6(a, l);
-    alert('The sum of all multiples of factors in array a found in array l is: ' + result);
+    let result = f6(d, m);
+    alert('The sum of all multiples of factors in array d found in array m is: ' + result);
 }
