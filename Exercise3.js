@@ -8,7 +8,7 @@
 <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>*/
 function f6(d, m) {
     let sum = 0;
-    for (let i = 0; i < d.length; i++) {
+    for (let i = 0; i < m.length; i++) {
         for (let j = 0; j < d.length; j++) {
             if (m[i] % d[j] === 0) {
                 sum += m[i];
