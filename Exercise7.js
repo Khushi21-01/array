@@ -1,0 +1,25 @@
+/*<p>Exercise 7, Objects as dictionaries/hashtables:</p>
+<p>Create a function, f7, that takes two parameters, basket and prices</p>
+<p>f7 should compute the cost of the basket given the prices supplied.</p>
+<p>basket should be an object holding product:quantity (string:int) pairs</p>
+<p>prices should be an object holding product:price (string:float) pairs</p>
+
+<p>==7.1==</p>
+<p>Create a testing page for the function f7</p>*/
+
+function f7 (basket, prices){
+    let totalcost = 0;
+    for(let product in basket){
+        let quantity = basket[product]
+        let price = prices[product]
+        totalcost += quantity * price
+    }
+    return totalcost;
+}
+function calculate(){
+    let basket = JSON.parse(document.getElementById ('Basket').value);
+    let prices = JSON.parse(document.getElementById('Price').value);
+    let total =  f7(basket, prices)
+
+    document.getElementById('result').textContent  = `Total Cost : Eur{total};`
+}
