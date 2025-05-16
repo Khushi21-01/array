@@ -4,9 +4,14 @@
 <p>(Exercise 5.1) Create a page with a button and two wide input boxes, labelled a and l</p>
 <p>Call the function f5 in the function called by onClick, and alert the user to the 
     returned answer when they press the button.</p>*/
-function f5(c, n) {
-    let sum = 0;
-    for (let i = 0; i < n.length; i++) {
+
+<html>
+    <head>
+    <title>Exercise 5</title>
+    <script>
+        function f5(c, n) {
+        let sum = 0;
+        for (let i = 0; i < n.length; i++) {
         if (n[i] % c[0] === 0 || n[i] % c[1] === 0) {
             sum += n[i];
         }
@@ -25,4 +30,19 @@ function calculate5() {
 
     let result = f5(c, n);
     alert('The sum of all multiples of factors in array c found in array n is: ' + result);
-}
+}</script> 
+</head>
+
+<body>
+    <h1>Exercise 5</h1>
+    <label for="inputC">Enter array c:</label><br>
+    <input type="text" id="inputC" required><br><br>
+
+    <label for="inputN">Enter array n:</label><br>
+    <input type="text" id="inputN" required><br><br>
+
+    <button onclick="calculate5()">Calculate Sum</button>
+
+</body>
+</html>
+ 

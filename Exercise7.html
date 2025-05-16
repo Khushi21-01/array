@@ -7,7 +7,11 @@
 <p>==7.1==</p>
 <p>Create a testing page for the function f7</p>*/
 
-function f7 (basket, prices){
+<html>
+    <head>
+    <title>Exercise 7</title>
+    <script>
+    function f7 (basket, prices){
     let totalcost = 0;
     for(let product in basket){
         let quantity = basket[product]
@@ -22,4 +26,19 @@ function calculate(){
     let total =  f7(basket, prices)
 
     document.getElementById('result').textContent  = `Total Cost : Eur{total};`
-}
+}</script>
+</head>
+
+<body>
+    <h1>Exercise 7</h1>
+    <label for ="Basket">Enter Basket:</label>
+    <input type="text" id="Basket" required>
+
+    <label for="prices">Enter prices:</label>
+    <input type="text" id="prices" required>
+
+    <button onclick="calculate()">Total cost</button>
+    
+</body>
+</html>
+
