@@ -4,10 +4,11 @@
 <p>(Exercise 4.1) Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
 <p>Call the function f4 in the function called by onClick, and alert the user to the 
     returned answer when they press the button.</p>*/
-
     
-        
-            function f4(a, b, l) {
+<html>
+    <head>
+        <script>   
+                 function f4(a, b, l) {
                 let sum = 0;
                 for (let i = 0; i < l.length; i++) {
                     if (l[i] % a === 0 || l[i] % b === 0) {
@@ -23,7 +24,24 @@
     
                 let result = f4(a, b, l);
                 alert('The sum of all multiples of ' + a + ' or ' + b + ' in the array is: ' + result);
-            }
+            }</script>
+        </head>
+        <body>
+        <h1>Exercise 4</h1>
+        <label for="inputA">Enter integer a:</label>
+        <input type="text" id="inputA" required><br><br>
+    
+        <label for="inputB">Enter integer b:</label>
+        <input type="text" id="inputB" required><br><br>
+    
+        <label for="inputL">Enter array l:</label>
+        <input type="text" id="inputL" required><br><br>
+    
+        <button onclick="calculate4()">Calculate Sum</button>  
+        </body>        
+</html>
+    
+
         
     
     
