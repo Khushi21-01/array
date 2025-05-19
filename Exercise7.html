@@ -8,37 +8,57 @@
 <p>Create a testing page for the function f7</p>*/
 
 <html>
-    <head>
-    <title>Exercise 7</title>
-    <script>
-    function f7 (basket, prices){
-    let totalcost = 0;
-    for(let product in basket){
-        let quantity = basket[product]
-        let price = prices[product]
-        totalcost += quantity * price
-    }
-    return totalcost;
-}
-function calculate(){
-    let basket = JSON.parse(document.getElementById ('Basket').value);
-    let prices = JSON.parse(document.getElementById('Price').value);
-    let total =  f7(basket, prices)
-
-    document.getElementById('result').textContent  = `Total Cost : Eur{total};`
-}</script>
+<head>
+    <title>Basket Total Calculator</title>
 </head>
+<script>
+    function f7(basket, prices) {
+        let totalCost = 0;
+        for (let product in basket) {
+            const quantity = basket[product];
+            const price = prices[product]; 
+            totalCost += quantity * price;
+        }
+        return totalCost;
+    }
 
+    function calculateTotal() {
+        try {
+            const basket = JSON.parse(document.getElementById('basket').value);
+            const prices = JSON.parse(document.getElementById('prices').value);
+            const total = f7(basket, prices);
+            document.getElementById('result').textContent = `Total Cost: $${total}`;
+        } catch (e) {
+            document.getElementById('result').textContent = 'Error: Invalid JSON input.';
+        }
+    }
+</script>
 <body>
-    <h1>Exercise 7</h1>
-    <label for ="Basket">Enter Basket:</label>
-    <input type="text" id="Basket" required>
 
-    <label for="prices">Enter prices:</label>
-    <input type="text" id="prices" required>
+<h1>Basket Total Calculator</h1>
 
-    <button onclick="calculate()">Total cost</button>
-    
+<label for="basket">Enter Basket :</label>
+<textarea id="basket">
+{
+  "apple": 3,
+  "banana": 2,
+  "orange": 1
+}
+</textarea>
+
+<label for="prices">Enter Prices :</label>
+<textarea id="prices">
+{
+  "apple": 0.5,
+  "banana": 0.3,
+  "orange": 0.8
+}
+</textarea>
+
+<button onclick="calculateTotal()">Calculate Total</button>
+
+<div class="result" id="result"></div>
+
 </body>
 </html>
 
